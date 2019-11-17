@@ -1,20 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import { ValueComponent } from './value/value.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { ErrorInterceptorprovider } from './_services/error.interceptor.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ValueComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NavComponent,
+      HomeComponent,
+      RegisterComponent
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule
+   ],
+   providers: [
+      ErrorInterceptorprovider
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }

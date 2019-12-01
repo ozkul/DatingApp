@@ -26,7 +26,6 @@ export class ErrorInterceptorService implements HttpInterceptor {
             return throwError(applicationError);
           }
 
-          
           const serverError = error;
           let modalStateErrors = '';
           if (
